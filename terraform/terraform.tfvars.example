@@ -1,0 +1,22 @@
+# Example Terraform variables file
+# Copy this to terraform.tfvars and update with your values
+
+# AWS Configuration
+aws_region = "us-east-1"
+
+# EC2 Key Pair (must exist in your AWS account)
+key_pair_name = "your-key-pair-name"
+
+# Instance Types
+instance_type        = "t3.small"   # For Puppet agents
+master_instance_type = "t3.medium"  # For Puppet master (needs more resources)
+
+# Network Configuration
+vpc_cidr           = "10.0.0.0/16"
+public_subnet_cidr = "10.0.1.0/24"
+
+# Security Configuration
+allowed_ssh_cidr = "0.0.0.0/0"  # Restrict this to your IP for better security
+
+# Project Configuration
+project_name = "puppet-infrastructure"
